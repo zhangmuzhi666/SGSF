@@ -170,4 +170,3 @@ def GSF(
         return adv_out, targets
 
     return adv_out
-
