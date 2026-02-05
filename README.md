@@ -1,15 +1,9 @@
 
-
-
-
-
-Requirements
-
-## 📂 Data & Models Preparation
+# 📂 Data & Models Preparation
 
 We provide automated scripts to download datasets and generate the balanced 1k subsets used in our experiments.
 
-### 1. MNIST & CIFAR-10 (Automated)
+## 1. MNIST & CIFAR-10 (Automated)
 
 We have encapsulated the download and subset generation logic in the `util/` directory.
 
@@ -27,7 +21,7 @@ python util\download_mnist.py
 python util/build_cifar10_1k.py
 ```
 
-### 2. ImageNet & Pre-trained Models
+## 2. ImageNet & Pre-trained Models
 
 For **ImageNet**, we use a fixed subset of 1,000 randomly selected images (pre-processed). For model checkpoints, we use standard pre-trained weights.
 
@@ -36,20 +30,14 @@ Please download the unified package `ALMA_models_data.zip` which contains:
 - The ImageNet 1k validation subset tensor.
 - Pre-trained model weights for all datasets.
 
-**Download & Setup:**
+## Download & Setup:
 
 1. Download from Zenodo: https://zenodo.org/record/6549010/files/ALMA_models_data.zip
 2. Unzip the file at the **root** of this repository.
 
+# 📂 Directory Structure
 
-# Additional required data
-
-The model state dicts for MNIST, CIFAR10 and ImageNet are fetched from various locations.
-
-3. Expected Directory Structure
-
-After running the scripts and extracting the zip file, your directory should look like this:
-Plaintext
+```text
 .
 ├── ATTACK/                 # Scripts to run attacks on different datasets
 ├── attacks/                # Implementation of attack algorithms (e.g., GeoSensFool)
